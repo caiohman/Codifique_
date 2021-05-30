@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>SOMA</title> 
+    </head>
+    <body>
+
+        <script type="text/javascript">
+            function sum(){
+                var num_one = parseInt(document.getElementById("f_num").value);
+                var num_two = parseInt(document.getElementById("s_num").value);
+                
+                if(isNaN(num_one) && isNaN(num_two)){
+                    console.log("Não reconheceu os [dois] numeros");
+                    return;
+                }
+                if(isNaN(num_one)){
+                    console.log("Não reconheceu o [primeiro] número");
+                    return;
+                } 
+                if(isNaN(num_two)){
+                    console.log("Não reconheceu o [segundo] número");
+                    return;
+                }
+
+                console.log(num_one + num_two);  
+            }    
+            </script>
+
+        <h1>Programa para somar 2 números</h1><br>
+        
+        <form>
+            <label>Insira um número:</label><br>
+            <input type="text" id="f_num"><br><br>
+            <label>Insira um número:</label><br>
+            <input type="text" id="s_num"><br><br>
+            <button onclick = "sum()">calcular</button>
+        </form>
+
+    </body>
+</html>
