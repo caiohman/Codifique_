@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>IMPRIMIR</title> 
+    </head>
+    <body>
+
+        <script type="text/javascript">
+            function number(){
+                var num = parseInt(document.getElementById("f_num").value);
+              
+                if(isNaN(num)){
+                    console.log("Não reconheceu o número");
+                    return;
+                } 
+
+                console.log("O numero informado foi " + num);  
+            }    
+            </script>
+
+        <h1>Programa para imprimir um número</h1><br>
+        
+        <form>
+            <label>Insira um número:</label><br>
+            <input type="text" id="f_num"><br><br>
+            <button onclick = "number()">imprimir</button>
+        </form>
+
+    </body>
+</html>    
