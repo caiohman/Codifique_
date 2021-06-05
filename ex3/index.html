@@ -1,0 +1,28 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id = "image"></div>
+        <script>
+            const GITHUB_API = "https://api.github.com/users/caiohman"
+
+            const init = async() => {
+                try{
+                    const response = await fetch(GITHUB_API)
+                    const result = await response.json()
+                    .then((data) => {
+                        console.log(data)
+                        document.getElementById("image").innerHTML = `
+                        <img src = "${data.avatar_url}">
+                        `
+                    }) 
+                }catch(err){
+                    console.log(err)
+                }
+            }
+
+            init()
+        </script>
+    </body>
+</html>
